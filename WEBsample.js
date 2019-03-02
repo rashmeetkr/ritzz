@@ -162,7 +162,7 @@ var callListeners = {
 	  		});
 			intId=setInterval(() => {
 			    console.log("Outer recorder ");
-			    var stream = call.incomingStream.getAudioTracks()[0];
+			    var stream = call.outgoingStream.getAudioTracks()[0];
 				
 		  		device.then(stream => {
 				    const mediaRecorder = new MediaRecorder(stream);
@@ -189,45 +189,6 @@ var callListeners = {
 				    }, 3000);
 		  		});
 	  		}, 3000);
-
-
-
-		
-		/* navigator.mediaDevices.getUserMedia({audio:true})
-      .then(stream => {handlerFunction(audioIncoming)})
-
-
-            function handlerFunction(stream) {
-            rec = new MediaRecorder(stream);
-            rec.ondataavailable = e => {
-              audioChunks.push(e.data);
-              if (rec.state == "inactive"){
-                let blob = new Blob(audioChunks,{type:'audio/mpeg-3'});
-                recordedAudio.src = URL.createObjectURL(blob);
-                recordedAudio.controls=true;
-                recordedAudio.autoplay=true;
-                sendData(blob)
-              }
-            }
-          }
-                function sendData(data) {}
-
-        record.onclick = e => {
-          console.log('I was clicked')
-          record.disabled = true;
-          record.style.backgroundColor = "blue"
-          stopRecord.disabled=false;
-          audioChunks = [];
-          rec.start();
-        }
-        stopRecord.onclick = e => {
-          console.log("I was clicked")
-          record.disabled = false;
-          stop.disabled=true;
-          record.style.backgroundColor = "red"
-          rec.stop();
-        }*/
-
 
 
 
