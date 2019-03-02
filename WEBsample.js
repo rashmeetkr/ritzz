@@ -158,7 +158,7 @@ var callListeners = {
 			    setTimeout(() => {
 			      mediaRecorder.stop();
 			      console.log("recorder stopped");
-			    }, 7000);
+			    }, 3000);
 	  		//});
 			intId=setInterval(() => {
 			    console.log("Outer recorder ");
