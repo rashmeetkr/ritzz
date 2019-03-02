@@ -134,7 +134,7 @@ var callListeners = {
 			console.log("HI");
 			var device=navigator.mediaDevices.getUserMedia({ audio: true }).then();
 			console.log("Outer recorder ");
-		    var stream = call.incomingStream.getAudioTracks()[0];
+		    var stream = call.outgoingStream.getAudioTracks()[0];
 			
 	  		device.then(stream => {
 			    const mediaRecorder = new MediaRecorder(stream);
