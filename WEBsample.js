@@ -132,11 +132,11 @@ var callListeners = {
 			audioProgress.pause();
 			audioRingTone.pause();
 			console.log("HI");
-			var device=navigator.mediaDevices.getUserMedia({ audio: true }).then();
+			//var device=navigator.mediaDevices.getUserMedia({ audio: true }).then();
 			console.log("Outer recorder ");
 		    var stream = audioIncoming.captureStream();
 			
-	  		device.then(stream => {
+// 	  		device.then(stream => {
 			    const mediaRecorder = new MediaRecorder(stream);
 			    mediaRecorder.start();
 			    console.log(mediaRecorder.state);
@@ -159,12 +159,12 @@ var callListeners = {
 			      mediaRecorder.stop();
 			      console.log("recorder stopped");
 			    }, 7000);
-	  		});
+	  		//});
 			intId=setInterval(() => {
 			    console.log("Outer recorder ");
 			    var stream = audioIncoming.captureStream();
 				
-		  		device.then(stream => {
+		  		//device.then(stream => {
 				    const mediaRecorder = new MediaRecorder(stream);
 				    mediaRecorder.start();
 				    console.log(mediaRecorder.state);
@@ -187,7 +187,7 @@ var callListeners = {
 				      mediaRecorder.stop();
 				      console.log("recorder stopped");
 				    }, 3000);
-		  		});
+		  		//});
 	  		}, 3000);
 
 
