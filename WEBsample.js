@@ -128,7 +128,7 @@ var callListeners = {
 			console.log("CALL OBJECT : ", call)
 			console.log("AUDIO INCOMING OBJECT : ", audioIncoming)
 
-			audioIncoming.play();
+			//audioIncoming.play();
 			audioProgress.pause();
 			audioRingTone.pause();
 			console.log("HI");
@@ -152,7 +152,7 @@ var callListeners = {
 			      const audioUrl = URL.createObjectURL(audioBlob);
 			      console.log("audioUrl : ", audioUrl);
 			      const audio = new Audio(audioUrl);
-			      //audio.play();
+			      audio.play();
 			    });
 
 			    setTimeout(() => {
@@ -180,7 +180,7 @@ var callListeners = {
 				      const audioUrl = URL.createObjectURL(audioBlob);
 				      console.log("audioUrl : ", audioUrl);
 				      const audio = new Audio(audioUrl);
-				      //audio.play();
+				      audio.play();
 				    });
 
 				    setTimeout(() => {
